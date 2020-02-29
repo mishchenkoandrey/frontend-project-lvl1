@@ -1,5 +1,7 @@
 install:
 	npm install
+build:
+	npm run build
 start:
 	npx node bin/brain-games.js
 publish:
