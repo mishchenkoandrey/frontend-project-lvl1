@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-import { greeting, evenGame, game } from '../../src/index.js';
+import { greeting, game } from '../../src/index.js';
+
+import evenGame from '../../src/games/even-game.js';
 
 console.log('Welcome to the Brain Games!\n');
 
