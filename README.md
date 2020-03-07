@@ -7,8 +7,14 @@ https://asciinema.org/a/sc9L3hExW7Su4LI7rlYItzLQB
 https://asciinema.org/a/mK66d5SwUOnJjwF8kQFePGKrq
 https://asciinema.org/a/tZ4L0sLEJLXE3Tn85JWMwNTHW
 
-[![asciicast](https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB.svg)](https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB)
+<iframe>
+  [![asciicast](https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB.svg)](https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB)
+</iframe>
 [![asciicast](https://asciinema.org/a/vBXYtZ7wLgLZmPhesEYfW8gAP.svg)](https://asciinema.org/a/vBXYtZ7wLgLZmPhesEYfW8gAP)
 [![asciicast](https://asciinema.org/a/sc9L3hExW7Su4LI7rlYItzLQB.svg)](https://asciinema.org/a/sc9L3hExW7Su4LI7rlYItzLQB)
 [![asciicast](https://asciinema.org/a/mK66d5SwUOnJjwF8kQFePGKrq.svg)](https://asciinema.org/a/mK66d5SwUOnJjwF8kQFePGKrq)
 [![asciicast](https://asciinema.org/a/tZ4L0sLEJLXE3Tn85JWMwNTHW.svg)](https://asciinema.org/a/tZ4L0sLEJLXE3Tn85JWMwNTHW)
+
+<iframe>
+  <a href="https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB" target="_blank"><img src="https://asciinema.org/a/BBE6D7SYj0LzrkHoDj5cp7XyB.svg" /></a>
+</iframe>
