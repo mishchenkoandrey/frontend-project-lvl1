@@ -2,6 +2,12 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "",
+  "keywords": [
+    "brain games",
+    "mind games",
+    "math games",
+    "console games"
+  ],
   "main": "src/index.js",
   "type": "module",
   "bin": {
