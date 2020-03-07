@@ -9,3 +9,4 @@ https://asciinema.org/a/vBXYtZ7wLgLZmPhesEYfW8gAP
 https://asciinema.org/a/sc9L3hExW7Su4LI7rlYItzLQB
 https://asciinema.org/a/mK66d5SwUOnJjwF8kQFePGKrq
 https://asciinema.org/a/tZ4L0sLEJLXE3Tn85JWMwNTHW
+<script src="https://asciinema.org/a/EK9l2zlzVa8CsHYA9SzTJTrKZ.js" id="asciicast-EK9l2zlzVa8CsHYA9SzTJTrKZ" data-cols="120" data-rows="14" data-preload="1" async type="ac5600e43520b03cbea044fb-text/javascript"></script>
