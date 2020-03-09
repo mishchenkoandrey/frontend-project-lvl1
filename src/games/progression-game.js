@@ -1,4 +1,6 @@
-const progressionGame = () => {
+const questionText = () => 'What number is missing in the progression?';
+
+export default () => {
   let answer;
   const progressionArrGeneration = () => {
     const randomNum1 = Math.floor(Math.random() * 10);
@@ -10,18 +12,12 @@ const progressionGame = () => {
       arrItem += randomDiff;
       progressionArr.push(arrItem);
     }
-    answer = progressionArr[randomPos];
+    answer = progressionArr[randomPos].toString();
     progressionArr[randomPos] = '..';
     return progressionArr.join(' ');
   };
-  const userAnswer = readlineSync.questionInt(`What number is missing in the progression?\nQuestion: ${progressionArrGeneration()}\nYour answer: `);
-  if (userAnswer === answer) {
-    console.log('Correct!');
-  } else {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.\nLet's try again, ${userName}!`);
-    return false;
-  }
-  return true;
+  const questionValue = progressionArrGeneration();
+  return [questionValue, answer];
 };
 
-export default progressionGame;
+export { questionText };
