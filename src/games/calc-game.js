@@ -1,24 +1,33 @@
-const questionText = () => 'What is the result of the expression?';
+import { randomFloor } from '../utils.js';
 
-export default () => {
-  const randomNum1 = Math.floor(Math.random() * 100);
-  const randomNum2 = Math.floor(Math.random() * 100);
-  const operandArr = ['+', '-', '*'];
-  const operandNumber = Math.floor(Math.random() * (operandArr.length));
-  const randomOperand = operandArr[operandNumber];
-  const questionValue = `${randomNum1} ${randomOperand} ${randomNum2}`;
+import gameEngine from '../index.js';
+
+const questionText = 'What is the result of the expression?';
+
+const calc = (num1, num2, operator) => {
   let answer;
-  switch (operandNumber) {
-    case 0:
-      answer = (randomNum1 + randomNum2).toString();
+  switch (operator) {
+    case '+':
+      answer = (num1 + num2).toString();
       break;
-    case 1:
-      answer = (randomNum1 - randomNum2).toString();
+    case '-':
+      answer = (num1 - num2).toString();
       break;
     default:
-      answer = (randomNum1 * randomNum2).toString();
+      answer = (num1 * num2).toString();
   }
+  return answer;
+};
+
+const gameData = () => {
+  const randomNum1 = randomFloor(100);
+  const randomNum2 = randomFloor(100);
+  const operatorArr = ['+', '-', '*'];
+  const operatorNumber = randomFloor(operatorArr.length);
+  const randomOperator = operatorArr[operatorNumber];
+  const questionValue = `${randomNum1} ${randomOperator} ${randomNum2}`;
+  const answer = calc(randomNum1, randomNum2, randomOperator);
   return [questionValue, answer];
 };
 
-export { questionText };
+export default () => gameEngine(gameData, questionText);

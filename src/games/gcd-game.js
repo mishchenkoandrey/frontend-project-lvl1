@@ -1,8 +1,12 @@
-const questionText = () => 'Find the greatest common divisor of given numbers.';
+import { randomFloor } from '../utils.js';
 
-export default () => {
-  const randomNum1 = Math.floor(Math.random() * 100);
-  const randomNum2 = Math.floor(Math.random() * 100);
+import gameEngine from '../index.js';
+
+const questionText = 'Find the greatest common divisor of given numbers.';
+
+const gameData = () => {
+  const randomNum1 = randomFloor(100);
+  const randomNum2 = randomFloor(100);
   const questionValue = `${randomNum1} ${randomNum2}`;
   const gcd = (a, b) => {
     if (b === 0) {
@@ -14,4 +18,4 @@ export default () => {
   return [questionValue, answer];
 };
 
-export { questionText };
+export default () => gameEngine(gameData, questionText);
