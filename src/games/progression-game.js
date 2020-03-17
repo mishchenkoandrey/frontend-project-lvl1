@@ -1,27 +1,23 @@
-import { randomFloor, randomCeil } from '../utils.js';
+import getRandom from '../utils.js';
 
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 
-const questionText = 'What number is missing in the progression?';
+const task = 'What number is missing in the progression?';
 
-const gameData = () => {
-  let answer;
-  const progressionArrGeneration = () => {
-    const randomNum1 = randomFloor(10);
-    const randomDiff = randomCeil(10);
-    const randomPos = randomFloor(10);
-    const progressionArr = [randomNum1];
-    let arrItem = randomNum1;
-    for (let i = 1; i < 10; i += 1) {
-      arrItem += randomDiff;
-      progressionArr.push(arrItem);
-    }
-    answer = progressionArr[randomPos].toString();
-    progressionArr[randomPos] = '..';
-    return progressionArr.join(' ');
-  };
-  const questionValue = progressionArrGeneration();
-  return [questionValue, answer];
+const getGameData = () => {
+  const num1 = getRandom(0, 10);
+  const diff = getRandom(1, 10);
+  const pos = getRandom(0, 9);
+  const progressionArr = [num1];
+  let arrItem = num1;
+  for (let i = 1; i < 10; i += 1) {
+    arrItem += diff;
+    progressionArr.push(arrItem);
+  }
+  const answer = progressionArr[pos].toString();
+  progressionArr[pos] = '..';
+  const question = progressionArr.join(' ');
+  return [question, answer];
 };
 
-export default () => gameEngine(gameData, questionText);
+export default () => runGameEngine(getGameData, task);

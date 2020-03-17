@@ -1,21 +1,22 @@
-import { randomFloor } from '../utils.js';
+import getRandom from '../utils.js';
 
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 
-const questionText = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
-const gameData = () => {
-  const randomNum1 = randomFloor(100);
-  const randomNum2 = randomFloor(100);
-  const questionValue = `${randomNum1} ${randomNum2}`;
-  const gcd = (a, b) => {
-    if (b === 0) {
-      return a;
-    }
-    return gcd(b, a % b);
-  };
-  const answer = gcd(randomNum1, randomNum2).toString();
-  return [questionValue, answer];
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
 };
 
-export default () => gameEngine(gameData, questionText);
+const getGameData = () => {
+  const num1 = getRandom(0, 100);
+  const num2 = getRandom(0, 100);
+  const question = `${num1} ${num2}`;
+  const answer = gcd(num1, num2).toString();
+  return [question, answer];
+};
+
+export default () => runGameEngine(getGameData, task);

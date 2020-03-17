@@ -1,8 +1,8 @@
-import { randomFloor, booleanToString } from '../utils.js';
+import getRandom from '../utils.js';
 
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 
-const questionText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -16,11 +16,11 @@ const isPrime = (num) => {
   return true;
 };
 
-const gameData = () => {
-  const randomNum = randomFloor(1000);
-  const questionValue = `${randomNum}`;
-  const answer = booleanToString(isPrime, randomNum);
-  return [questionValue, answer];
+const getGameData = () => {
+  const num = getRandom(0, 1000);
+  const question = num.toString();
+  const answer = isPrime(num) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => gameEngine(gameData, questionText);
+export default () => runGameEngine(getGameData, task);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import greeting from '../src/games.js';
+import greet from '../src/games.js';
 
-greeting();
+greet();

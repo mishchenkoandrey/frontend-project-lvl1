@@ -1,16 +1,16 @@
-import { randomFloor, booleanToString } from '../utils.js';
+import getRandom from '../utils.js';
 
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 
-const questionText = 'Answer "yes" if the number is even, otherwise answer "no".';
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-const gameData = () => {
-  const randomNum = randomFloor(100);
-  const questionValue = `${randomNum}`;
-  const answer = booleanToString(isEven, randomNum);
-  return [questionValue, answer];
+const getGameData = () => {
+  const num = getRandom(0, 100);
+  const question = num.toString();
+  const answer = isEven(num) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => gameEngine(gameData, questionText);
+export default () => runGameEngine(getGameData, task);
