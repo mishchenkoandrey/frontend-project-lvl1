@@ -8,15 +8,15 @@ const getGameData = () => {
   const num1 = getRandom(0, 10);
   const diff = getRandom(1, 10);
   const pos = getRandom(0, 9);
-  const progressionArr = [num1];
-  let arrItem = num1;
+  const progression = [num1];
+  let progressionItem = num1;
   for (let i = 1; i < 10; i += 1) {
-    arrItem += diff;
-    progressionArr.push(arrItem);
+    progressionItem += diff;
+    progression.push(progressionItem);
   }
-  const answer = progressionArr[pos].toString();
-  progressionArr[pos] = '..';
-  const question = progressionArr.join(' ');
+  const answer = progression[pos].toString();
+  progression[pos] = '..';
+  const question = progression.join(' ');
   return [question, answer];
 };
 
