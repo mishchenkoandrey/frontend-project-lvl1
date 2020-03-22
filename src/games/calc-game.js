@@ -24,8 +24,8 @@ const operatorMaxNum = operators.length - 1;
 const getGameData = () => {
   const num1 = getRandom(0, 100);
   const num2 = getRandom(0, 100);
-  const operatorNum = getRandom(0, operatorMaxNum);
-  const operator = operators[operatorNum];
+  const operatorIndex = getRandom(0, operatorMaxNum);
+  const operator = operators[operatorIndex];
   const question = `${num1} ${operator} ${num2}`;
   const answer = calcExpression(num1, num2, operator).toString();
   return [question, answer];
