@@ -4,7 +4,7 @@ import runGameEngine from '../index.js';
 
 const task = 'What is the result of the expression?';
 
-const calcExpression = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -27,7 +27,7 @@ const getGameData = () => {
   const operatorIndex = getRandom(0, operatorMaxNum);
   const operator = operators[operatorIndex];
   const question = `${num1} ${operator} ${num2}`;
-  const answer = calcExpression(num1, num2, operator).toString();
+  const answer = calculate(num1, num2, operator).toString();
   return [question, answer];
 };
 
