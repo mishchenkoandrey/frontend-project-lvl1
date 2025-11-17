@@ -19,7 +19,6 @@ export default [
 
   ...compat.extends(
     'airbnb-base',
-    'plugin:jest/recommended',
   ),
 
   {
@@ -28,14 +27,12 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.node,
-        ...globals.jest,
       },
     },
 
     rules: {
       'no-console': 'off',
       'import/extensions': 'off',
-      'jest/expect-expect': 'error',
     },
   },
 
