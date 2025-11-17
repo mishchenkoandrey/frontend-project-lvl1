@@ -1,8 +1,12 @@
-import airbnbBase from 'eslint-config-airbnb-base';
-import globals from 'globals';
+import airbnbBase from "eslint-config-airbnb-base";
+import globals from "globals";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const compat = new FlatCompat();
 
 export default [
-  airbnbBase,
+
+  ...compat.extends("airbnb-base"),
 
   {
     languageOptions: {
@@ -12,8 +16,8 @@ export default [
     },
 
     rules: {
-      'no-console': 'off',
-      'import/extensions': 'off',
+      "no-console": "off",
+      "import/extensions": "off",
     },
   },
 ];
