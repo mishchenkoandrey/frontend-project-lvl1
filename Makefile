@@ -1,5 +1,5 @@
 install:
-	npm install
+	npm install --legacy-peer-deps
 start:
 	node bin/brain-games.js
 publish:
